@@ -1,0 +1,23 @@
+[
+    {"name": "Audi", "model": "A6", "datum": "12.04.2012", "boja": "crna"},
+    {"name": "BMW", "model": "X5", "datum": "15.03.2011", "boja": "siva"},
+    {"name": "Ferari", "model": "Spider", "datum": "01.11.2010", "boja": "crvena"},
+    {"name": "Jugo", "model": "Koral 55", "datum": "04.04.1991", "boja": "bordo"},
+    {"name": "Zastava", "model": "101", "datum": "18.05.1986", "boja": "plava"},
+    {"name": "Golf", "model": "2", "datum": "16.02.1990", "boja": "zelena"},
+    {"name": "Toyota", "model": "Yaris", "datum": "08.10.1998", "boja": "žuta"},
+    {"name": "Honda", "model": "Civic", "datum": "23.07.2009", "boja": "siva"},
+    {"name": "Opel", "model": "Corsa", "datum": "31.03.1999", "boja": "plava"},
+    {"name": "Mustang", "model": "H22", "datum": "19.08.2006", "boja": "zelena"},
+    {"name": "BMW", "model": "X7", "datum": "13.12.2007", "boja": "siva"},
+    {"name": "Audi", "model": "A4", "datum": "04.06.1999", "boja": "plava"},
+    {"name": "Lamborghini", "model": "Diablo", "datum": "29.03.1990", "boja": "bela"},
+    {"name": "Fiat", "model": "Punto", "datum": "15.09.2003", "boja": "bordo"},
+    {"name": "Opel", "model": "Astra", "datum": "21.11.2004", "boja": "crvena"},
+    {"name": "Reno", "model": "Clio", "datum": "07.01.2005", "boja": "bela"},
+    {"name": "Peugeot", "model": "407", "datum": "08.02.2008", "boja": "plava"},
+    {"name": "Porsche", "model": "Carrera", "datum": "18.07.2006", "boja": "crna"},
+    {"name": "Lada", "model": "Niva", "datum": "10.12.1989", "boja": "zelena"},
+    {"name": "Reno", "model": "Megan", "datum": "04.08.2003", "boja": "bela"}
+  ]
+  

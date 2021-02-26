@@ -1,0 +1,26 @@
+<html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+<p>
+    <label for="search">Search: </label>
+    <input type="text" id="search" name="search">
+</p>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    var arr = [];
+    $.getJSON("data.json", function (data) {
+        $.each(data, function (key, value) {
+            if ($.inArray(value.name, arr) === -1) {
+                arr.push(value.name)
+            }
+        })
+    });
+    console.log(arr);
+    $("#search").autocomplete({
+        source: arr
+    });
+
+</script>
+
+
+</html>
