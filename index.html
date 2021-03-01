@@ -8,16 +8,29 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script>
     var arr = [];
-    $.getJSON("data.json", function (data) {
-        $.each(data, function (key, value) {
-            if ($.inArray(value.name, arr) === -1) {
-                arr.push(value.name)
-            }
-        })
-    });
+
     console.log(arr);
+
     $("#search").autocomplete({
-        source: arr
+        source: function (request, response) {
+            console.log(request);
+            $.get("data.csv", function (data) {
+                arr = [];
+                data = data.split(",");
+                $.each(data, function (key, value) {
+                    if ($.inArray(value, arr) === -1) {
+                        if(value.includes(request.term)){
+                            arr.push(value)
+                        }
+                    }
+                })
+                if(arr.length == 0){
+                    arr.push("No keyword found");
+                }
+            response(arr);
+            });
+        },
+
     });
 
 </script>
