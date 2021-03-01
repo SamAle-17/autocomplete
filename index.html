@@ -7,27 +7,31 @@
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script>
-    var arr = [];
+    var list = [];
 
-    console.log(arr);
+    console.log(list);
 
     $("#search").autocomplete({
-        source: function (request, response) {
-            console.log(request);
+        source: function (searchWord, response) {
+            console.log(searchWord);
+            //get the keyword from csv data
             $.get("data.csv", function (data) {
-                arr = [];
+                list = [];
+                // split the data from file using comma
                 data = data.split(",");
+                // foreach keyword if similar to search word push to list
                 $.each(data, function (key, value) {
-                    if ($.inArray(value, arr) === -1) {
-                        if(value.includes(request.term)){
-                            arr.push(value)
+                    if ($.inArray(value, list) === -1) {
+                        if(value.includes(searchWord.term)){
+                            list.push(value)
                         }
                     }
                 })
-                if(arr.length == 0){
-                    arr.push("No keyword found");
+                // if list is empty add no keyword found message
+                if(list.length == 0){
+                    list.push("No keyword found");
                 }
-            response(arr);
+            response(list);
             });
         },
 
